@@ -31,21 +31,21 @@ const resources = [
     copy: "Structure confident, patient-centered conversations around pain and bloating.",
     icon: ClipboardCheck,
     to: "/counseling",
-    tone: "teal" as const,
+    tone: "blue" as const,
   },
   {
     title: "Professional Support",
     copy: "Route medical, scientific, quality, and safety inquiries to the right team.",
     icon: Stethoscope,
     to: "/professional-support",
-    tone: "teal" as const,
+    tone: "amber" as const,
   },
   {
     title: "My Dashboard",
     copy: "Track learning progress, saved guidance, recent updates, and certification.",
     icon: LayoutDashboard,
     to: "/dashboard",
-    tone: "teal" as const,
+    tone: "sky" as const,
   },
 ];
 

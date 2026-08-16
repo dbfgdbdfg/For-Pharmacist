@@ -3,7 +3,7 @@ import { IconTile, PageHeader, PortalShell, SectionTitle, SupportiveNote, usePag
 
 const services = [
   { title: "Medical Inquiry", copy: "Request appropriate medical-information support for a product or use-related question.", icon: Stethoscope, tone: "teal" as const },
-  { title: "Scientific Inquiry", copy: "Route literature, evidence, or scientific-exchange questions to the right specialist.", icon: FlaskConical, tone: "teal" as const },
+  { title: "Scientific Inquiry", copy: "Route literature, evidence, or scientific-exchange questions to the right specialist.", icon: FlaskConical, tone: "blue" as const },
   { title: "Product Complaint", copy: "Document a product quality concern through the approved quality reporting process.", icon: ClipboardPlus, tone: "amber" as const },
   { title: "Adverse Event Reporting", copy: "Report a possible adverse event through the applicable local pharmacovigilance pathway.", icon: BadgeAlert, tone: "red" as const },
 ];

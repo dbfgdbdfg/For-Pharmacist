@@ -60,7 +60,7 @@ export default function ProductEvidencePage() {
                     <li>Pamabrom</li>
                   </ul>
                 </div>
-                <div className="rounded-2xl bg-teal-50 p-5">
+                <div className="rounded-2xl bg-blue-50 p-5">
                   <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal-700">Dosage form</p>
                   <p className="mt-3 text-sm font-semibold leading-6 text-slate-800">Liquid Soft Capsule</p>
                 </div>

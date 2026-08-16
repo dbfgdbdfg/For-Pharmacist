@@ -20,7 +20,7 @@ const safetyCards = [
     title: "How to Use",
     copy: "Counsel on appropriate use and check whether the patient has already taken a pain reliever today.",
     icon: HeartPulse,
-    tone: "teal" as const,
+    tone: "amber" as const,
   },
   {
     title: "Maximum Daily Dose",
