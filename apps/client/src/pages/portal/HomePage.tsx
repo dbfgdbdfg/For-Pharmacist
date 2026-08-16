@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { IconTile, PortalShell, SectionTitle, usePageMeta } from "./shared";
+import heroImage from "./imageforhome.png"; // 확장자가 다를 경우(jpg 등) 실제 파일명에 맞게 수정해주세요!
 
 const resources = [
   {
@@ -45,7 +46,7 @@ const resources = [
     copy: "Track learning progress, saved guidance, recent updates, and certification.",
     icon: LayoutDashboard,
     to: "/dashboard",
-    tone: "slate" as const,
+    tone: "violet" as const,
   },
 ];
 
@@ -56,6 +57,8 @@ export default function HomePage() {
     <PortalShell>
       <section className="clinical-grid overflow-hidden">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-24">
+          
+          {/* 왼쪽 텍스트 및 버튼 영역 */}
           <div className="relative z-10">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-100 bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.15em] text-teal-700 shadow-sm">
               <HeartPulse size={15} />
@@ -88,39 +91,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative min-h-[390px]">
-            <div className="absolute inset-6 rounded-[2rem] bg-gradient-to-br from-teal-600 via-teal-600 to-teal-500 shadow-2xl shadow-teal-200" />
-            <div className="absolute inset-x-0 bottom-0 top-0 rounded-[2rem] border border-white/60 bg-white/10 backdrop-blur-[1px]" />
-            <div className="absolute left-6 top-7 rounded-2xl border border-white/70 bg-white p-4 shadow-xl shadow-teal-950/10 sm:left-10">
-              <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-teal-50 text-teal-600"><BookOpen size={22} /></span>
-                <span>
-                  <span className="block text-xs font-bold uppercase tracking-[0.12em] text-teal-600">Resource of the week</span>
-                  <span className="mt-1 block text-sm font-bold text-slate-900">Counseling essentials</span>
-                </span>
-              </div>
-            </div>
-            <div className="absolute right-4 top-28 w-56 rounded-2xl border border-white/80 bg-white p-5 shadow-xl shadow-teal-950/10 sm:right-8">
-              <p className="text-xs font-bold uppercase tracking-[0.13em] text-slate-400">Pharmacist pathway</p>
-              <div className="mt-4 space-y-3">
-                {["Assess symptoms", "Screen safety", "Counsel clearly"].map((item, index) => (
-                  <div key={item} className="flex items-center gap-3 text-sm font-semibold text-slate-700">
-                    <span className="grid h-6 w-6 place-items-center rounded-full bg-teal-50 text-xs font-bold text-teal-700">{index + 1}</span>
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="absolute bottom-6 left-5 right-5 rounded-2xl border border-white/60 bg-slate-950 p-5 text-white shadow-xl shadow-teal-950/20 sm:bottom-9 sm:left-10 sm:right-10">
-              <div className="flex items-start gap-3">
-                <CircleHelp className="mt-0.5 shrink-0 text-teal-300" size={20} />
-                <div>
-                  <p className="text-sm font-bold">Designed for efficient counseling.</p>
-                  <p className="mt-1 text-sm leading-5 text-slate-300">Find the product, safety, counseling, and support information that matters in the moment.</p>
-                </div>
-              </div>
-            </div>
+          {/* 오른쪽 제품 이미지 영역 (기존의 복잡한 네모 박스 제거됨) */}
+          <div className="relative flex items-center justify-center p-4">
+            <img 
+              src={heroImage} 
+              alt="Better Day Hub Product" 
+              className="w-full h-auto max-w-lg object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105" 
+            />
           </div>
+          
         </div>
       </section>
 
