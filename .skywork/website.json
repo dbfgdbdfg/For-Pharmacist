@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 4,
+  "kind": "website",
+  "websiteId": "01a008dd-2885-7ea6-be73-57c5b1b9f854",
+  "projectType": "frontend",
+  "layout": "selfHostClient",
+  "template": {
+    "id": "react",
+    "version": "prod_selfhost"
+  },
+  "build": {
+    "command": "pnpm --filter client build",
+    "distDir": "apps/client/dist"
+  },
+  "backend": {
+    "enabled": false
+  },
+  "deployment": {},
+  "capabilities": {},
+  "backendBaseline": {
+    "fingerprint": "e6875baada251f37bce4412b2b362c6652d0ed88ff340bb76ba85c729f965bc1",
+    "paths": [
+      "apps/server/_core",
+      "apps/server/db",
+      "apps/server/middlewares",
+      "apps/server/routes",
+      "apps/server/services",
+      "apps/server/migrations",
+      "apps/server/package.json",
+      "apps/server/vite.config.ts",
+      "apps/server/tsconfig.json",
+      "packages/shared"
+    ]
+  },
+  "repository": {
+    "initId": "b81e5b70-1039-4102-a275-bdc75e161f12",
+    "state": "active",
+    "repositoryId": 282182,
+    "owner": "PROD_256807228354518749",
+    "name": "01a008dd-2885-7ea6-be73-57c5b1b9f854",
+    "host": "gitea.skywork.ai",
+    "webUrl": "https://gitea.skywork.ai/PROD_256807228354518749/01a008dd-2885-7ea6-be73-57c5b1b9f854",
+    "sshUrl": "ssh://git@gitea.skywork.ai/PROD_256807228354518749/01a008dd-2885-7ea6-be73-57c5b1b9f854.git",
+    "cloneUrl": "https://gitea.skywork.ai/PROD_256807228354518749/01a008dd-2885-7ea6-be73-57c5b1b9f854.git",
+    "initialCommitId": "1422303e891aadb18e4b83ec71c77734a2d8aafc"
+  }
+}
