@@ -65,7 +65,7 @@ export default function HomePage() {
               Women&apos;s health resource center
             </p>
             <h1 className="max-w-3xl text-5xl font-bold tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-7xl">
-              Better <span className="text-teal-600">Day</span> <span className="text-blue-600">Pro</span>
+              Better <span className="text-teal-600">Day</span> Pro
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
               Empowering pharmacists for better period-pain counseling. <br className="hidden sm:block" />
