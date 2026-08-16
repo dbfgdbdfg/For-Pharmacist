@@ -42,7 +42,7 @@ export default function ProfessionalSupportPage() {
           <div className="rounded-3xl bg-gradient-to-br from-teal-700 to-teal-950 p-8 text-white sm:p-10">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal-300">Local connection</p>
             <h2 className="mt-3 text-3xl font-bold tracking-[-0.04em]">Bring the right question to the right team.</h2>
-            <p className="mt-4 leading-7 text-teal-100">Medical, scientific, quality, and safety questions often follow different processes. Use this hub to identify the appropriate route before contacting your local support network.</p>
+            <p className="mt-4 leading-7 text-teal-100">Medical, scientific, quality, and safety questions often follow different processes. Use this Pro to identify the appropriate route before contacting your local support network.</p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal-700">Prototype contact panel</p>

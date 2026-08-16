@@ -20,7 +20,7 @@ export const navItems = [
 ];
 
 const resourceSearch = [
-  { title: "Better Day Hub home", to: "/", category: "Overview" },
+  { title: "Better Day Pro home", to: "/", category: "Overview" },
   { title: "Product & Evidence Library", to: "/product-evidence", category: "Evidence" },
   { title: "Safety Information", to: "/safety", category: "Safety" },
   { title: "Counseling Guide", to: "/counseling", category: "Counseling" },
@@ -30,7 +30,7 @@ const resourceSearch = [
 
 export function usePageMeta(title: string, description: string) {
   useEffect(() => {
-    document.title = `${title} | Better Day Hub`;
+    document.title = `${title} | Better Day Pro`;
     const descriptionTag = document.querySelector('meta[name="description"]');
     if (descriptionTag) {
       descriptionTag.setAttribute("content", description);
@@ -77,7 +77,7 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
             </span>
             <span>
               <span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-teal-600">Easy&apos;N 6 Eve</span>
-              <span className="block text-lg font-bold tracking-tight text-slate-950">Better Day Hub</span>
+              <span className="block text-lg font-bold tracking-tight text-slate-950">Better Day Pro</span>
             </span>
           </Link>
 
@@ -213,7 +213,7 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
           <div className="flex items-start gap-3">
             <ShieldCheck className="mt-0.5 shrink-0 text-teal-600" size={19} />
             <p className="max-w-2xl text-slate-500">
-              Better Day Hub is a competition concept prototype for licensed pharmacists. It is not official prescribing information or a substitute for local approved product information.
+              Better Day Pro is a competition concept prototype for licensed pharmacists. It is not official prescribing information or a substitute for local approved product information.
             </p>
           </div>
           <div className="flex gap-4 text-xs font-semibold text-slate-500">

@@ -51,7 +51,7 @@ const resources = [
 ];
 
 export default function HomePage() {
-  usePageMeta("Evidence-based pharmacist education", "Better Day Hub is a concept prototype for pharmacist education, counseling, safety resources, and professional support.");
+  usePageMeta("Evidence-based pharmacist education", "Better Day Pro is a concept prototype for pharmacist education, counseling, safety resources, and professional support.");
 
   return (
     <PortalShell>
@@ -65,10 +65,11 @@ export default function HomePage() {
               Women&apos;s health resource center
             </p>
             <h1 className="max-w-3xl text-5xl font-bold tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-7xl">
-              Better <span className="text-teal-600">Day</span> Hub
+              Better <span className="text-teal-600">Day</span> <span className="text-blue-600">Pro</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-              Evidence-based pharmacist education and counseling platform for women&apos;s health.
+            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+              Empowering pharmacists for better period-pain counseling. <br className="hidden sm:block" />
+              Evidence, safety information, and practical counseling tools for Easy&apos;N 6 Eve.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -95,7 +96,7 @@ export default function HomePage() {
           <div className="relative flex items-center justify-center p-4">
             <img 
               src={heroImage} 
-              alt="Better Day Hub Product" 
+              alt="Better Day Pro Product" 
               className="w-full h-auto max-w-lg object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105" 
             />
           </div>
@@ -106,7 +107,7 @@ export default function HomePage() {
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            eyebrow="Explore the hub"
+            eyebrow="Explore the Pro"
             title="The information you need, arranged around your workflow."
             description="Each resource area is designed to move from product understanding to safe, practical counseling."
           />
