@@ -42,11 +42,11 @@ export default function DashboardPage() {
               <p className="mt-1 text-3xl font-bold tracking-[-0.04em] text-slate-950">03</p>
               <p className="mt-4 text-xs leading-5 text-slate-500">New learning summaries available in the evidence library.</p>
             </article>
-            <article className="rounded-2xl border border-teal-100 bg-gradient-to-br from-teal-50 to-teal-50 p-6 shadow-sm">
-              <IconTile icon={Award} tone="teal" />
-              <p className="mt-5 text-sm font-bold text-teal-800">Better Day Pharmacist Certification</p>
-              <p className="mt-1 text-xl font-bold tracking-[-0.03em] text-slate-950">Complete 1 more module</p>
-              <p className="mt-4 text-xs leading-5 text-slate-600">Unlock your prototype learning completion badge.</p>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <IconTile icon={Sparkles} tone="teal" />
+              <p className="mt-5 text-sm font-bold text-slate-500">Better Day Pharmacist Certification</p>
+              <p className="mt-1 text-3xl font-bold tracking-[-0.04em] text-slate-950">Complete 1 more module</p>
+              <p className="mt-4 text-xs leading-5 text-slate-500">Unlock your prototype learning completion badge.</p>
             </article>
           </div>
         </div>
