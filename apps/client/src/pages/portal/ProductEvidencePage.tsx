@@ -60,11 +60,11 @@ export default function ProductEvidencePage() {
                     <li>Pamabrom</li>
                   </ul>
                 </div>
-                <div className="rounded-2xl bg-blue-50 p-5">
+                <div className="rounded-2xl bg-slate-50 p-5">
                   <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal-700">Dosage form</p>
                   <p className="mt-3 text-sm font-semibold leading-6 text-slate-800">Liquid Soft Capsule</p>
                 </div>
-                <div className="rounded-2xl bg-slate-100 p-5">
+                <div className="rounded-2xl bg-teal-100 p-5">
                   <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">Indications</p>
                   <ul className="mt-3 space-y-1.5 text-sm font-semibold leading-6 text-slate-800">
                     <li>Menstrual pain relief</li>

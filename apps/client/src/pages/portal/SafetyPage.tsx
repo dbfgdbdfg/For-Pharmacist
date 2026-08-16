@@ -26,7 +26,7 @@ const safetyCards = [
     title: "Maximum Daily Dose",
     copy: "Do not exceed the maximum daily dose stated in the locally approved product information.",
     icon: AlertTriangle,
-    tone: "amber" as const,
+    tone: "red" as const,
   },
 ];
 

@@ -45,7 +45,7 @@ const resources = [
     copy: "Track learning progress, saved guidance, recent updates, and certification.",
     icon: LayoutDashboard,
     to: "/dashboard",
-    tone: "sky" as const,
+    tone: "slate" as const,
   },
 ];
 
