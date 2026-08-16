@@ -108,7 +108,7 @@ export default function CounselingPage() {
                 icon: HeartPulse,
                 title: "Why pain occurs",
                 copy: "Menstrual pain is associated with increased prostaglandin production.",
-                tone: "blue" as const,
+                tone: "teal" as const,
               },
               {
                 icon: Stethoscope,
@@ -120,7 +120,7 @@ export default function CounselingPage() {
                 icon: CircleCheck,
                 title: "How pamabrom may help",
                 copy: "Pamabrom may help reduce temporary menstrual bloating.",
-                tone: "blue" as const,
+                tone: "teal" as const,
               },
             ].map((item) => (
               <article key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -149,7 +149,7 @@ export default function CounselingPage() {
                     <p className="mt-4 text-sm font-bold leading-5 text-slate-800">{step}</p>
                   </div>
                   {index < flow.length - 1 && (
-                    <div className="grid h-6 place-items-center text-blue-500 lg:h-auto lg:w-7">
+                    <div className="grid h-6 place-items-center text-teal-500 lg:h-auto lg:w-7">
                       <span className="block text-lg lg:hidden">↓</span>
                       <span className="hidden text-lg lg:block">→</span>
                     </div>

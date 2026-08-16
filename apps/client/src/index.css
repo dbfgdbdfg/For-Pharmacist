@@ -159,7 +159,8 @@
   position: relative;
   background:
     radial-gradient(circle at 84% 18%, rgba(20, 184, 166, 0.17), transparent 24rem),
-    radial-gradient(circle at 14% 78%, rgba(37, 99, 235, 0.12), transparent 26rem),
+    /* 👇 여기 파란색(37, 99, 235)을 청록색(44, 147, 140)으로 변경 */
+    radial-gradient(circle at 14% 78%, rgba(44, 147, 140, 0.12), transparent 26rem),
     linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
 }
 
@@ -168,9 +169,10 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
+  /* 👇 격자 무늬 선 색상도 청록색으로 변경 */
   background-image:
-    linear-gradient(rgba(37, 99, 235, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(44, 147, 140, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 147, 140, 0.035) 1px, transparent 1px);
   background-size: 34px 34px;
   mask-image: linear-gradient(to bottom, black, transparent 80%);
 }

@@ -30,9 +30,9 @@ const evidence = [
 ];
 
 const features = [
-  { label: "Fast Onset", icon: Clock3, tone: "blue" as const },
+  { label: "Fast Onset", icon: Clock3, tone: "teal" as const },
   { label: "Liquid Soft Capsule", icon: Pill, tone: "teal" as const },
-  { label: "Easy to Swallow", icon: Sparkles, tone: "blue" as const },
+  { label: "Easy to Swallow", icon: Sparkles, tone: "teal" as const },
   { label: "Supports Menstrual Pain & Bloating", icon: HeartPulse, tone: "teal" as const },
 ];
 
@@ -53,8 +53,8 @@ export default function ProductEvidencePage() {
             <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9">
               <SectionTitle eyebrow="Product overview" title="Designed around two menstrual symptom considerations." />
               <div className="mt-7 grid gap-5 sm:grid-cols-3">
-                <div className="rounded-2xl bg-blue-50 p-5">
-                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700">Active ingredients</p>
+                <div className="rounded-2xl bg-teal-50 p-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal-700">Active ingredients</p>
                   <ul className="mt-3 space-y-1.5 text-sm font-semibold leading-6 text-slate-800">
                     <li>Ibuprofen</li>
                     <li>Pamabrom</li>
@@ -72,7 +72,7 @@ export default function ProductEvidencePage() {
                   </ul>
                 </div>
               </div>
-              <button type="button" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-3 text-sm font-bold text-white shadow-md shadow-blue-100 transition hover:bg-blue-700">
+              <button type="button" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-teal-600 px-4 py-3 text-sm font-bold text-white shadow-md shadow-teal-100 transition hover:bg-teal-700">
                 View Product Information <ArrowRight size={17} />
               </button>
             </div>
@@ -87,7 +87,7 @@ export default function ProductEvidencePage() {
                   <p className="mt-6 text-sm font-bold">Evidence summaries</p>
                 </div>
                 <div className="rounded-2xl border border-slate-700 bg-white/5 p-4">
-                  <Beaker className="text-blue-300" size={21} />
+                  <Beaker className="text-teal-300" size={21} />
                   <p className="mt-6 text-sm font-bold">Mechanism refreshers</p>
                 </div>
               </div>
@@ -100,9 +100,9 @@ export default function ProductEvidencePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle eyebrow="Mechanism of action" title="Two complementary mechanism summaries." />
           <div className="grid gap-6 lg:grid-cols-2">
-            <article className="rounded-3xl border border-blue-100 bg-white p-7 shadow-sm sm:p-9">
+            <article className="rounded-3xl border border-teal-100 bg-white p-7 shadow-sm sm:p-9">
               <div className="flex items-start gap-4">
-                <IconTile icon={Beaker} tone="blue" />
+                <IconTile icon={Beaker} tone="teal" />
                 <div>
                   <h3 className="text-xl font-bold text-slate-950">Ibuprofen</h3>
                   <p className="mt-1 text-sm text-slate-500">NSAID mechanism overview</p>
@@ -110,7 +110,7 @@ export default function ProductEvidencePage() {
               </div>
               <ul className="mt-7 grid gap-3 text-sm leading-6 text-slate-700">
                 {["Inhibits prostaglandin synthesis", "Relieves menstrual pain", "Reduces inflammation"].map((item) => (
-                  <li key={item} className="flex gap-3 rounded-xl bg-blue-50/70 p-3.5"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600" />{item}</li>
+                  <li key={item} className="flex gap-3 rounded-xl bg-teal-50/70 p-3.5"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-600" />{item}</li>
                 ))}
               </ul>
             </article>
@@ -162,7 +162,7 @@ export default function ProductEvidencePage() {
                   </div>
                   <h3 className="mt-4 text-lg font-bold leading-6 tracking-[-0.02em] text-slate-900">{study.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{study.copy}</p>
-                  <button type="button" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-900">
+                  <button type="button" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-teal-700 hover:text-teal-900">
                     Read Publication <ArrowRight size={16} />
                   </button>
                 </div>
@@ -181,7 +181,7 @@ export default function ProductEvidencePage() {
             <p className="text-sm font-bold text-slate-900">Need a safety refresher before counseling?</p>
             <p className="mt-1 text-sm text-slate-500">Review key cautions, contraindications, and referral prompts.</p>
           </div>
-          <Link to="/safety" className="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-900">Open safety information <ArrowRight size={17} /></Link>
+          <Link to="/safety" className="inline-flex items-center gap-2 text-sm font-bold text-teal-700 hover:text-teal-900">Open safety information <ArrowRight size={17} /></Link>
         </div>
       </section>
     </PortalShell>

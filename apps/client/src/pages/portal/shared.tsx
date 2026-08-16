@@ -59,12 +59,12 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="border-b border-blue-100 bg-blue-950 px-4 py-2 text-center text-[10px] font-semibold tracking-[0.12em] text-blue-100 sm:text-xs">
+      <div className="border-b border-teal-100 bg-teal-950 px-4 py-2 text-center text-[10px] font-semibold tracking-[0.12em] text-teal-100 sm:text-xs">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-1">
           <span>FOR HEALTHCARE PROFESSIONALS ONLY</span>
-          <span className="hidden h-3 w-px bg-blue-700 sm:block" />
+          <span className="hidden h-3 w-px bg-teal-700 sm:block" />
           <span>CONCEPT PROTOTYPE FOR COMPETITION</span>
-          <span className="hidden h-3 w-px bg-blue-700 sm:block" />
+          <span className="hidden h-3 w-px bg-teal-700 sm:block" />
           <span>NOT AN OFFICIAL COMMERCIAL WEBSITE</span>
         </div>
       </div>
@@ -72,7 +72,7 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-40 border-b border-slate-200/90 bg-white/95 backdrop-blur">
         <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link to="/" className="group flex items-center gap-3" onClick={closeMenus}>
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 text-white shadow-lg shadow-blue-200 transition-transform duration-200 group-hover:-translate-y-0.5">
+            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-teal-600 to-teal-500 text-white shadow-lg shadow-teal-200 transition-transform duration-200 group-hover:-translate-y-0.5">
               <BookOpenCheck size={21} strokeWidth={2.4} />
             </span>
             <span>
@@ -89,7 +89,7 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
                   key={item.to}
                   to={item.to}
                   className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
-                    active ? "bg-blue-50 text-blue-700" : "text-slate-600 hover:bg-slate-50 hover:text-blue-700"
+                    active ? "bg-teal-50 text-teal-700" : "text-slate-600 hover:bg-slate-50 hover:text-teal-700"
                   }`}
                 >
                   {item.label}
@@ -103,14 +103,14 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
               type="button"
               aria-label="Search resources"
               onClick={() => setSearchOpen((open) => !open)}
-              className="grid h-10 w-10 place-items-center rounded-full text-slate-600 transition hover:bg-blue-50 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="grid h-10 w-10 place-items-center rounded-full text-slate-600 transition hover:bg-teal-50 hover:text-teal-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
             >
               <Search size={19} />
             </button>
             <button
               type="button"
               aria-label="Notifications"
-              className="relative grid h-10 w-10 place-items-center rounded-full text-slate-600 transition hover:bg-blue-50 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="relative grid h-10 w-10 place-items-center rounded-full text-slate-600 transition hover:bg-teal-50 hover:text-teal-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
             >
               <Bell size={19} />
               <span className="absolute right-2.5 top-2.5 h-2 w-2 rounded-full bg-teal-500 ring-2 ring-white" />
@@ -120,8 +120,8 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
               aria-label="Open pharmacist dashboard"
               className={`hidden h-10 items-center gap-2 rounded-full border px-3 text-sm font-semibold transition sm:flex ${
                 location.pathname === "/dashboard"
-                  ? "border-blue-200 bg-blue-50 text-blue-700"
-                  : "border-slate-200 text-slate-700 hover:border-blue-200 hover:bg-blue-50"
+                  ? "border-teal-200 bg-teal-50 text-teal-700"
+                  : "border-slate-200 text-slate-700 hover:border-teal-200 hover:bg-teal-50"
               }`}
             >
               <UserRound size={17} />
@@ -131,7 +131,7 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
               type="button"
               aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
               onClick={() => setMobileOpen((open) => !open)}
-              className="grid h-10 w-10 place-items-center rounded-lg text-slate-700 transition hover:bg-blue-50 hover:text-blue-700 lg:hidden"
+              className="grid h-10 w-10 place-items-center rounded-lg text-slate-700 transition hover:bg-teal-50 hover:text-teal-700 lg:hidden"
             >
               {mobileOpen ? <X size={21} /> : <Menu size={21} />}
             </button>
@@ -141,8 +141,8 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
         {searchOpen && (
           <div className="absolute inset-x-0 top-full border-b border-slate-200 bg-white p-4 shadow-xl shadow-slate-900/5">
             <div className="mx-auto max-w-3xl">
-              <label className="flex items-center gap-3 rounded-xl border border-blue-200 bg-blue-50/50 px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500">
-                <Search size={18} className="text-blue-600" />
+              <label className="flex items-center gap-3 rounded-xl border border-teal-200 bg-teal-50/50 px-4 py-3 focus-within:ring-2 focus-within:ring-teal-500">
+                <Search size={18} className="text-teal-600" />
                 <input
                   autoFocus
                   value={query}
@@ -159,13 +159,13 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
                       key={item.to}
                       to={item.to}
                       onClick={closeMenus}
-                      className="flex items-center justify-between px-4 py-3 transition hover:bg-blue-50"
+                      className="flex items-center justify-between px-4 py-3 transition hover:bg-teal-50"
                     >
                       <span>
                         <span className="block text-sm font-semibold text-slate-800">{item.title}</span>
                         <span className="text-xs text-slate-500">{item.category}</span>
                       </span>
-                      <ChevronRight size={17} className="text-blue-600" />
+                      <ChevronRight size={17} className="text-teal-600" />
                     </Link>
                   ))
                 ) : (
@@ -187,7 +187,7 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
                     to={item.to}
                     onClick={closeMenus}
                     className={`rounded-lg px-3 py-3 text-sm font-semibold ${
-                      active ? "bg-blue-50 text-blue-700" : "text-slate-700 hover:bg-slate-50"
+                      active ? "bg-teal-50 text-teal-700" : "text-slate-700 hover:bg-slate-50"
                     }`}
                   >
                     {item.label}
@@ -217,8 +217,8 @@ export function PortalShell({ children }: { children: React.ReactNode }) {
             </p>
           </div>
           <div className="flex gap-4 text-xs font-semibold text-slate-500">
-            <Link to="/safety" className="hover:text-blue-700">Safety</Link>
-            <Link to="/professional-support" className="hover:text-blue-700">Medical support</Link>
+            <Link to="/safety" className="hover:text-teal-700">Safety</Link>
+            <Link to="/professional-support" className="hover:text-teal-700">Medical support</Link>
           </div>
         </div>
       </footer>
@@ -271,7 +271,7 @@ export function SectionTitle({
   );
 }
 
-export function IconTile({ icon: Icon, tone = "blue" }: { icon: LucideIcon; tone?: "blue" | "teal" | "amber" | "red" }) {
+export function IconTile({ icon: Icon, tone = "teal" }: { icon: LucideIcon; tone?: "teal" | "blue" | "amber" | "red" }) {
   const tones = {
     blue: "bg-blue-50 text-blue-600 ring-blue-100",
     teal: "bg-teal-50 text-teal-600 ring-teal-100",
@@ -287,8 +287,8 @@ export function IconTile({ icon: Icon, tone = "blue" }: { icon: LucideIcon; tone
 
 export function SupportiveNote({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex gap-3 rounded-2xl border border-blue-100 bg-blue-50/70 p-4 text-sm leading-6 text-blue-900">
-      <ShieldCheck className="mt-0.5 shrink-0 text-blue-600" size={19} />
+    <div className="flex gap-3 rounded-2xl border border-teal-100 bg-teal-50/70 p-4 text-sm leading-6 text-teal-900">
+      <ShieldCheck className="mt-0.5 shrink-0 text-teal-600" size={19} />
       <p>{children}</p>
     </div>
   );

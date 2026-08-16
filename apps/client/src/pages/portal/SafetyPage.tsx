@@ -14,7 +14,7 @@ const safetyCards = [
     title: "Recommended Dosage",
     copy: "Use the current locally approved product information to confirm patient-specific dosing and suitability.",
     icon: ClipboardCheck,
-    tone: "blue" as const,
+    tone: "teal" as const,
   },
   {
     title: "How to Use",
@@ -94,11 +94,11 @@ export default function SafetyPage() {
               ))}
             </ul>
           </article>
-          <article className="rounded-3xl border border-blue-100 bg-blue-50/60 p-7 sm:p-9">
+          <article className="rounded-3xl border border-teal-100 bg-teal-50/60 p-7 sm:p-9">
             <div className="flex items-center gap-4">
-              <IconTile icon={ShieldAlert} tone="blue" />
+              <IconTile icon={ShieldAlert} tone="teal" />
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-600">Common adverse reactions</p>
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal-600">Common adverse reactions</p>
                 <h2 className="mt-1 text-2xl font-bold tracking-[-0.03em] text-slate-950">Know the common patient-reported concerns.</h2>
               </div>
             </div>

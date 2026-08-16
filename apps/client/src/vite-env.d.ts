@@ -20,7 +20,7 @@ interface Window {
           getSkippedReason: () => string;
           getDismissedReason: () => string;
         }) => void) => void;
-        renderButton: (parent: HTMLElement, options: { theme: "outline" | "filled_blue" | "filled_black"; size: "large" | "medium" | "small"; width?: number }) => void;
+        renderButton: (parent: HTMLElement, options: { theme: "outline" | "filled_teal" | "filled_black"; size: "large" | "medium" | "small"; width?: number }) => void;
       };
     };
   };

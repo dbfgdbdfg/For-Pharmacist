@@ -4,8 +4,8 @@ import { IconTile, PageHeader, PortalShell, SectionTitle, usePageMeta } from "./
 
 const activities = [
   { title: "Completed Safety Module", meta: "Today · 12 min", icon: CheckCircle2, tone: "teal" as const },
-  { title: "Viewed Counseling Guide", meta: "Yesterday · 8 min", icon: BookOpenCheck, tone: "blue" as const },
-  { title: "New Clinical Evidence Available", meta: "This week · Product & Evidence", icon: FileText, tone: "blue" as const },
+  { title: "Viewed Counseling Guide", meta: "Yesterday · 8 min", icon: BookOpenCheck, tone: "teal" as const },
+  { title: "New Clinical Evidence Available", meta: "This week · Product & Evidence", icon: FileText, tone: "teal" as const },
 ];
 
 export default function DashboardPage() {
@@ -24,10 +24,10 @@ export default function DashboardPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="flex items-center justify-between"><IconTile icon={GraduationCap} tone="blue" /><span className="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-bold text-blue-700">In progress</span></div>
+              <div className="flex items-center justify-between"><IconTile icon={GraduationCap} tone="teal" /><span className="rounded-full bg-teal-50 px-2.5 py-1 text-xs font-bold text-teal-700">In progress</span></div>
               <p className="mt-5 text-sm font-bold text-slate-500">Learning Progress</p>
               <p className="mt-1 text-3xl font-bold tracking-[-0.04em] text-slate-950">68%</p>
-              <div className="mt-4 h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full w-[68%] rounded-full bg-gradient-to-r from-blue-600 to-teal-500" /></div>
+              <div className="mt-4 h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full w-[68%] rounded-full bg-gradient-to-r from-teal-600 to-teal-500" /></div>
               <p className="mt-3 text-xs text-slate-500">3 of 4 core learning areas complete</p>
             </article>
             <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -37,12 +37,12 @@ export default function DashboardPage() {
               <p className="mt-4 text-xs leading-5 text-slate-500">Your most-used counseling pathways are ready to revisit.</p>
             </article>
             <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <IconTile icon={Sparkles} tone="blue" />
+              <IconTile icon={Sparkles} tone="teal" />
               <p className="mt-5 text-sm font-bold text-slate-500">Recently Updated Evidence</p>
               <p className="mt-1 text-3xl font-bold tracking-[-0.04em] text-slate-950">03</p>
               <p className="mt-4 text-xs leading-5 text-slate-500">New learning summaries available in the evidence library.</p>
             </article>
-            <article className="rounded-2xl border border-teal-100 bg-gradient-to-br from-teal-50 to-blue-50 p-6 shadow-sm">
+            <article className="rounded-2xl border border-teal-100 bg-gradient-to-br from-teal-50 to-teal-50 p-6 shadow-sm">
               <IconTile icon={Award} tone="teal" />
               <p className="mt-5 text-sm font-bold text-teal-800">Better Day Pharmacist Certification</p>
               <p className="mt-1 text-xl font-bold tracking-[-0.03em] text-slate-950">Complete 1 more module</p>
