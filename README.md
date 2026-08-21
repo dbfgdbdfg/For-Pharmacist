@@ -1,185 +1,122 @@
-# Coding Agent Web Template
+# 💊 EasyN6 Eve Professional Portal
 
-Full-stack template for generated web apps.
+## 2026 KNAPS 하계 직능계발대회
+### 제약산업대회 (ISE) with 대웅제약
 
-## What Is Included
+🏆 **1팀 (Team 1)**  
+🥇 **대상**
 
-- React client in `apps/client`
-- Hono backend in `apps/server`
-- Better Auth for user authentication
-- Server-only skybase-db access through Drizzle ORM over libsql
-- Shared response helpers in `packages/shared`
+---
 
-## Local Development
+# 📖 프로젝트 소개
 
-Install dependencies:
+**EasyN6 Eve Professional Portal**은 대웅제약의 **이지엔6 이브(EZN6 Eve)**의 인도네시아 시장 진출 전략의 일환으로 기획된 **약사 전용 디지털 정보 플랫폼**입니다.
 
-```bash
-pnpm install
-```
+약사가 제품 정보를 쉽고 빠르게 확인하고, 환자 상담에 필요한 근거 자료와 복약 정보를 효율적으로 활용할 수 있도록 설계하였습니다.
 
-Start the local app:
+또한 제품 정보 제공을 넘어, 근거 중심(Evidence-Based)의 상담 지원 서비스를 제공하는 것을 목표로 하였습니다.
 
-```bash
-cd apps/client
-pnpm dev
-```
+---
 
-Open:
+# 프로젝트 목표
 
-```txt
-http://localhost:3100/
-```
+EasyN6 Eve Professional Portal은 다음과 같은 기능을 제공합니다.
 
-The Vite dev server mounts the Hono backend under `/api/*` on the same origin.
+- 제품 정보 및 임상 근거 제공
+- 안전성 정보 확인
+- 환자 복약 상담 지원
+- FAQ 제공
+- 약사 전용 Dashboard
+- Professional Support 제공
 
-The Vite dev server serves history routes from the same client app. For example:
+---
 
-```txt
-http://localhost:3100/
-```
+# ✨ 주요 기능
 
-## Runtime Env
+### Product & Evidence
 
-Frontend env is public and must use `VITE_`.
+- 제품 소개
+- 작용기전
+- 임상 근거
+- 주요 특징
 
-Backend DB env is injected into the running function by skybase-controller for the current `session_id`. Local `.env` values are only for development/debugging.
+### Safety
 
-Backend runtime env contract:
+- 이상반응
+- 주의사항
+- 금기사항
+- 안전성 정보
 
-| Env | Required | Source | Purpose |
-| --- | --- | --- | --- |
-| `SKYBASE_DB_ENDPOINT` | Yes for DB-backed APIs | skybase-controller | sqld/libsql user API endpoint for this session, for example `http://10.59.118.218:8080` |
-| `SKYBASE_DB_TOKEN` / `SKYBASE_DB_AUTH_TOKEN` | Yes for DB-backed APIs | skybase-controller | libsql rw token used as `Authorization: Bearer <token>`; `SKYBASE_DB_AUTH_TOKEN` is accepted as a controller-compatible alias |
-| `SKYBASE_DB_NAMESPACE` | Yes for DB-backed APIs | skybase-controller | tenant namespace sent as `x-namespace` on libsql requests |
-| `BETTER_AUTH_SECRET` | Recommended for production | controller/deploy config, local `.env` in dev | Better Auth signing secret |
-| `BETTER_AUTH_URL` | Yes | controller/deploy config, local `.env` in dev | Public auth base URL, for example `http://localhost:3100/api/auth` |
-| `ALLOWED_ORIGINS` | Yes | controller/deploy config, local `.env` in dev | Comma-separated CORS origins |
-| `GOOGLE_CLIENT_ID` | Optional | OAuth provider config | Enables Google login when paired with `GOOGLE_CLIENT_SECRET` |
-| `GOOGLE_CLIENT_SECRET` | Optional | OAuth provider config | Enables Google login when paired with `GOOGLE_CLIENT_ID` |
+### Counseling Guide
 
-`SKYBASE_DB_TOKEN` / `SKYBASE_DB_AUTH_TOKEN` is not a Better Auth session token, user token, or skybase-controller `X-Auth-Token`. It is the libsql database token injected into this backend runtime. The app does not create this token and does not use DB admin email/password at runtime. Template code normalizes both names to `env.SKYBASE_DB_TOKEN`; when both names are present, `SKYBASE_DB_AUTH_TOKEN` wins.
+- 환자 상담 가이드
+- 복약지도
+- 복용 시 주의사항
 
-Local development can use a root `.env` file:
+### FAQ
 
-```env
-SKYBASE_DB_ENDPOINT=http://127.0.0.1:8080
-SKYBASE_DB_AUTH_TOKEN=...
-# SKYBASE_DB_TOKEN=... also works as a legacy alias
-SKYBASE_DB_NAMESPACE=local
-BETTER_AUTH_SECRET=replace-with-a-local-secret
-BETTER_AUTH_URL=http://localhost:3100/api/auth
-ALLOWED_ORIGINS=http://localhost:3100
-```
+- 자주 묻는 질문
+- 제품 관련 정보
 
-If Vite starts on a fallback port such as `3101`, update `BETTER_AUTH_URL` and `ALLOWED_ORIGINS` to that port for local testing.
+### Professional Support
 
-Production startup does not fail when `BETTER_AUTH_SECRET` is missing; the app falls back to a template default so demos can boot. Set a stable random `BETTER_AUTH_SECRET` before using real user auth. Missing `SKYBASE_DB_ENDPOINT`, DB token, or `SKYBASE_DB_NAMESPACE` does not block `/api/health`, but DB-backed APIs and `/api/auth/*` return `DATABASE_UNCONFIGURED`.
+- 교육 자료
+- 참고 문헌
+- 전문 자료 제공
 
-## Authentication
+### My Dashboard
 
-Authentication is handled by Better Auth at:
+- 최근 확인한 자료
+- 즐겨찾기
+- 개인화된 정보 관리
 
-```txt
-/api/auth/*
-```
+---
 
-Supported auth flows:
+# 🛠️ 개발 과정
 
-- username + password
-- email + password
-- Google login when Google env is provided
-- bearer token transport for API calls
+Skywork를 활용하여 웹 서비스의 **초기 프로토타입을 생성**한 후, 요구사항에 맞게 **UI/UX와 기능을 수정**하고 **코드를 직접 커스터마이징**하여 완성하였습니다. 최종 서비스는 **Netlify를 통해 배포**하였습니다.
 
-Better Auth data is stored in skybase-db through its Drizzle adapter. Required auth tables are defined in the Drizzle schema and applied by agent database tooling, not by this app at runtime.
+---
 
-## Database Model
+# 💻 Tech Stack
 
-The app exposes business APIs to browsers. It does not expose raw database APIs.
+- HTML
+- CSS
+- JavaScript
+- Skywork (Prototype Generation)
+- Netlify (Deployment)
 
-Template routes:
+---
 
-```txt
-GET /api/health
-GET /api/auth-config
-/api/auth/*
-GET /api/todos
-POST /api/todos
-PATCH /api/todos/:id
-DELETE /api/todos/:id
-```
+# Project Concept
 
-The app runtime does not create db instances, create tables, run migrations, or seed data. Controller owns DB provisioning/deploy env injection. Agent tooling owns Drizzle schema setup/migrations through the self-host `setup_database` step. FC runtime only performs business CRUD. The template intentionally does not expose DB setup or migration package scripts; those commands belong to controller/agent tooling so namespace-aware sqld execution stays outside the generated app runtime.
+EasyN6 Eve Professional Portal은 단순한 제품 소개 웹사이트가 아닌,
 
-## API Client
+**약사가 근거 기반(Evidence-Based)으로 환자 상담을 수행할 수 있도록 지원하는 디지털 플랫폼**을 목표로 기획되었습니다.
 
-Use the shared frontend API wrapper:
+이를 통해
 
-```ts
-import { apiFetch } from "@/lib/api";
-```
+- 약사의 상담 효율 향상
+- 제품 정보 접근성 향상
+- 근거 중심 복약지도 지원
+- 브랜드 신뢰도 강화
 
-`apiFetch()` attaches the current Better Auth bearer token by default and shows a toast for non-2xx API responses.
+를 기대할 수 있습니다.
 
-## Build
+---
 
-Build frontend:
+# 🏆 Competition Information
 
-```bash
-cd apps/client
-pnpm build
-```
+| 항목 | 내용 |
+|------|------|
+| 대회 | 2026 KNAPS 하계 직능계발대회 |
+| 분야 | 제약산업대회 (ISE) |
+| 협력 | 대웅제약 |
+| 팀 | Team 1 |
+| 성과 | 🥇 대상 |
 
-Build backend for the default FC event adapter entry:
+---
 
-```bash
-cd apps/server
-pnpm build
-```
+# 📌 Disclaimer
 
-Build backend for the long-running web entry used by the Docker image:
-
-```bash
-cd apps/server
-SERVER_BUILD_TARGET=web pnpm build
-```
-
-Backend build output:
-
-```txt
-apps/server/dist/index.js
-```
-
-## Docker
-
-Build the backend web entry first, then build the image:
-
-```bash
-cd apps/server
-SERVER_BUILD_TARGET=web pnpm build
-cd ../..
-docker build -t coding-agent-web-template-api .
-```
-
-The Docker image copies and runs the existing backend build output:
-
-```txt
-apps/server/dist/index.js
-```
-
-The runtime image has a root `package.json` start script and supports platforms that run:
-
-```bash
-npm start
-```
-
-For local container debugging, provide backend runtime env through local container tooling without committing secrets.
-
-## Checks
-
-```bash
-pnpm --filter server exec tsc -p tsconfig.json --noEmit
-pnpm --filter server build
-pnpm --filter client exec tsc -p tsconfig.app.json --noEmit
-pnpm --filter client build
-```
+본 프로젝트는 **2026 KNAPS 하계 직능계발대회**를 위해 제작된 프로토타입으로, 연구 및 학습 목적으로 공개되었습니다.
